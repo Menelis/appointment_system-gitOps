@@ -40,11 +40,11 @@ spec:
           {{- end }}
           image: "{{ .Values.image.repository }}:{{ .Values.image.tag | default .Chart.AppVersion }}"
           imagePullPolicy: {{ .Values.image.pullPolicy }}
-          {{- with .Values.baseEnv }}
+          {{- with .Values.env }}
           env:
             {{- toYaml . | nindent 12 }}
           {{- end }}
-          {{- with .Values.env }}
+          {{- with .Values.baseEnv }}
             {{- toYaml . | nindent 12 }}
           {{- end }}
           ports:

@@ -1,0 +1,15 @@
+serviceAccount:
+  name: zookeeper-dev-service-account
+
+service:
+  port: 2181
+  targetPort: 2181
+
+env:
+  - name: ZOOKEEPER_SERVERS
+    value: "zookeeper:2888:3888"
+
+#livenessProbe:
+#  exec:
+#    command:
+#      - /bin/bash
