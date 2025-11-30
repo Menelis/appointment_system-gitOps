@@ -1,0 +1,5 @@
+serviceAccount:
+  name: notification-service-dev-service-account
+
+image:
+  tag: 1.0.1

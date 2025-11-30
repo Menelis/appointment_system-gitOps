@@ -1,0 +1,10 @@
+{{- if and .Values.configMap .Values.configMap.create -}}
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: {{ .Values.configMap.name }}
+data:
+  {{ .Values.configMap.dataFileName | default "environment.json" }}: |-
+    {{- $filename := print .Values.configMap.path .Values.configMap.fileName }}
+    {{- .Files.Get $filename | nindent 4 }}
+{{- end }}

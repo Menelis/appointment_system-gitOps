@@ -1,0 +1,8 @@
+serviceAccount:
+  name: appointment-api-gateway-dev-service-account
+
+image:
+  tag: 1.0.1
+env:
+  - name: SPRING_CLOUD_CONFIG_LABEL
+    value: dev

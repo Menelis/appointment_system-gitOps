@@ -1,0 +1,9 @@
+serviceAccount:
+  name: auth-server-dev-service-account
+
+image:
+  tag: 1.0.4
+
+env:
+  - name: SPRING_CLOUD_CONFIG_LABEL
+    value: dev
