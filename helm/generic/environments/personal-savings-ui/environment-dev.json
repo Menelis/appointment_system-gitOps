@@ -1,0 +1,7 @@
+{
+  "production": false,
+  "apiUrl": "http://localhost:654/api",
+  "defaultUiSettings": {
+    "pageSize": 10
+  }
+}
